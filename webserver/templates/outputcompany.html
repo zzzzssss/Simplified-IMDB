@@ -1,0 +1,15 @@
+
+<body>
+	<h1>Search Result:</h1>
+	<div><font size="5"><b>Company Name: </b>{{cname}}</font></div>
+	<div><font size="5"><b>Country: </b>{{country}}</font></div>
+     <div><font size="5"><b>Website: </b><a href={{website}}>link</a></font></div>
+   
+
+
+	<div><font size="5"><b>Movies: </b></font></div>
+	{% for n in movie %}
+		<div><font size="5">{{n}}</font></div>
+	{% endfor %}
+	
+</body>

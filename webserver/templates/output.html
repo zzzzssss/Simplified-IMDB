@@ -1,0 +1,61 @@
+
+<body>
+	<h1>Search Result:</h1>
+	<div><font size="5"><b>Movie Title: </b>{{mtitle}}</font></div>
+	<div><font size="5"><b>Avg rate: </b>{{avg}}</font></div>
+	<div><font size="5"><b>Type: </b>{{type}}</font></div>
+	<div><font size="5"><b>Release Date: </b>{{date}}</font></div>
+	<div><font size="5"><b>Description: </b>{{desc}}</font></div>
+	<div><font size="5"><b>Actors: </b></font></div>
+	<table border="1">
+		<tr>
+			<td><font size="5">Name</font>
+			</td>
+			<td><font size="5">Character</font>
+			</td>
+		</tr>
+		{% for key, value in act.items() %}
+			<tr>
+				<td><font size="5">{{key}}</font>
+				</td>
+				<td><font size="5">{{value}}</font>
+				</td>
+			</tr>
+			{% else %}
+			<tr>
+				No Actor Data Found!
+			</tr>
+		{% endfor %}
+	</table>
+	<div><font size="5"><b>Director: </b></font></div>
+	{% for n in director %}
+		<div><font size="5">{{n}}</font></div>
+	{% endfor %}
+	<div><font size="5"><b>Company: </b></font></div>
+	{% for n in company %}
+		<div><font size="5">{{n}}</font></div>
+	{% endfor %}
+	<div><font size="5"><b>Trailers: </b></font></div>
+	<table border="1">
+		<tr>
+			<td><font size="5">Link</font>
+			</td>
+			<td><font size="5">View_count</font>
+			</td>
+			<td><font size="5">Date_released</font>
+			</td>
+			<td><font size="5">Version</font>
+			</td>
+		</tr>
+		{% for n in trailer %}
+		  <tr>
+		  	{% for d in n %}
+		  	  <td>{{d}}</td>
+		  	  {% else %}
+		  	  No Trailer Info Found!
+		  	{% endfor %}
+		  </tr>
+		{% endfor %}
+	</table>
+
+</body>

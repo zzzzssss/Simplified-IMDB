@@ -1,0 +1,29 @@
+Welcome to register for MINI IMDB system!
+
+<body>
+  <h1>Register</h1>
+  <p color="red">{{error_message}}</p>
+  <div id="register_form">
+    <form name="r1" method="post" action="/register" id="r1">
+        <table>
+            <tr>
+                <td class="r1_label">Email :</td><td><input type="text" name="username" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="r1_label">Password  :</td><td><input type="password" name="password" value=""  />
+                </td>
+            </tr>
+            <tr>
+                <td class="r1_label">Nickname  :</td><td><input type="nickname" name="nickname" value=""  />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="register" value="register" style="font-size:18px; " />
+                </td>
+            </tr>
+        </table>
+    </form> 
+  </div>
+</body>

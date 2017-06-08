@@ -1,0 +1,34 @@
+
+<body>
+	<h1>Search Result:</h1>
+	<div><font size="5"><b>Actor Name: </b>{{aname}}</font></div>
+	<div><font size="5"><b>Date of birth: </b>{{dob}}</font></div>
+	<div><font size="5"><b>Country: </b>{{country}}</font></div>
+	<div><font size="5"><b>Trade Mark: </b>{{tmark}}</font></div>
+     <div><font size="5"><b>Known for: </b>{{knfor}}</font></div>
+    
+      <div><font size="5"><b>Movie title: </b></font></div>
+      <table border="1">
+		<tr>
+			<td><font size="5">Movie Title</font>
+			</td>
+			<td><font size="5">Release Date</font>
+			</td>
+			<td><font size="5">Type</font>
+			</td>
+			<td><font size="5">Description</font>
+			</td>
+		</tr>
+		{% for n in movie %}
+		  <tr>
+		  	{% for d in n %}
+		  	  <td>{{d}}</td>
+		  	  {% else %}
+		  	  No Movie Info Found!
+		  	{% endfor %}
+		  </tr>
+		{% endfor %}
+	</table>
+
+	
+</body>
